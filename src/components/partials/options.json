@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_partials_options",
+  "info": {
+    "displayName": "Options"
+  },
+  "options": {},
+  "attributes": {
+    "is_header": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_footer": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_bottom": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}

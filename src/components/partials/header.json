@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_partials_headers",
+  "info": {
+    "displayName": "Favicon"
+  },
+  "options": {},
+  "attributes": {
+    "favicon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
