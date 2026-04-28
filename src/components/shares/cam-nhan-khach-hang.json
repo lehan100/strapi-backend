@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shares_cam_nhan_khach_hangs",
+  "info": {
+    "displayName": "Cảm nhận khách hàng"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feedback-set.feedback-set"
+    }
+  },
+  "config": {}
+}

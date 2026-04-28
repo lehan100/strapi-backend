@@ -1,0 +1,20 @@
+{
+    "collectionName": "components_partials_banner_tops",
+    "info": {
+        "displayName": "BannerTop"
+    },
+    "options": {},
+    "attributes": {
+        "photo": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        }
+    },
+    "config": {}
+}

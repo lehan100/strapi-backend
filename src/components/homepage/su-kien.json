@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_homepage_su_kiens",
+  "info": {
+    "displayName": "Sự kiện"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
+    }
+  },
+  "config": {}
+}

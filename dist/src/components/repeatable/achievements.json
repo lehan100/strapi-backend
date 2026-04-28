@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_repeatable_achievements",
+    "info": {
+        "displayName": "Achievements"
+    },
+    "options": {},
+    "attributes": {
+        "title_top": {
+            "type": "string"
+        },
+        "count_up": {
+            "type": "string"
+        },
+        "count_text": {
+            "type": "string"
+        },
+        "photo": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        }
+    },
+    "config": {}
+}

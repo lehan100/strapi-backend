@@ -4,7 +4,7 @@
   "info": {
     "singularName": "event-schedule",
     "pluralName": "event-schedules",
-    "displayName": "EventSchedule"
+    "displayName": "Lịch trình hoạt động sự kiện"
   },
   "options": {
     "draftAndPublish": true
@@ -39,11 +39,11 @@
         }
       }
     },
-    "event": {
+    "danh_sach_su_kien": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::event.event",
-      "inversedBy": "event_schedules"
+      "inversedBy": "schedules"
     }
   }
 }

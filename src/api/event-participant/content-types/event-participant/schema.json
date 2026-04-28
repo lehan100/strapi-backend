@@ -4,7 +4,7 @@
   "info": {
     "singularName": "event-participant",
     "pluralName": "event-participants",
-    "displayName": "EventParticipant"
+    "displayName": "Người tham gia sự kiện"
   },
   "options": {
     "draftAndPublish": true
@@ -46,14 +46,9 @@
         "audios"
       ]
     },
-    "event": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::event.event",
-      "inversedBy": "event_participants"
-    },
     "description": {
       "type": "richtext",
+      "customField": "global::tinymce",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -62,11 +57,18 @@
     },
     "about": {
       "type": "richtext",
+      "customField": "global::tinymce",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "items": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "participants"
     }
   }
 }

@@ -1,0 +1,137 @@
+PAYMENT API POSTMAN TEST GUIDE
+Project: backend-strapi
+Base URL local: http://localhost:1337
+Base URL server: https://strapi.webcanhcam.vn
+
+------------------------------------------------------------
+0) PREPARE
+------------------------------------------------------------
+1. In .env:
+   - PAYMENT_MOCK=true (for mock test) OR false (real gateway)
+   - Fill MOMO_/ZALOPAY_/VNPAY_ keys if testing real gateway.
+2. Restart Strapi after editing .env.
+3. Ensure role permissions are enabled:
+   Settings -> Users & Permissions -> Roles -> Public (or use API token)
+   - Order: create, find, findOne
+   - Order Item: create, find, findOne
+   - Checkout: createPayment, status, webhook, paymentReturn
+
+------------------------------------------------------------
+1) CREATE ORDER
+------------------------------------------------------------
+POST {{BASE_URL}}/api/orders
+Headers:
+  Content-Type: application/json
+  Authorization: Bearer {{TOKEN}}   (optional if Public role is open)
+
+Body:
+{
+  "data": {
+    "order_code": "ORD-20260409-0001",
+    "customer_name": "Nguyen Van A",
+    "customer_email": "a@test.com",
+    "customer_phone": "0900000000",
+    "currency": "VND",
+    "subtotal": 500000,
+    "discount": 0,
+    "shipping_fee": 30000,
+    "tax": 0,
+    "total": 530000,
+    "payment_method": "momo",
+    "payment_status": "pending",
+    "status": "pending_payment"
+  }
+}
+
+Expected:
+  response.data.id = <orderId>
+
+------------------------------------------------------------
+2) CREATE ORDER ITEM
+------------------------------------------------------------
+POST {{BASE_URL}}/api/order-items
+Headers:
+  Content-Type: application/json
+  Authorization: Bearer {{TOKEN}}   (optional if Public role is open)
+
+Body:
+{
+  "data": {
+    "order": {{orderId}},
+    "sku": "SKU-001",
+    "product_name": "San pham A",
+    "quantity": 2,
+    "unit_price": 250000,
+    "line_total": 500000
+  }
+}
+
+------------------------------------------------------------
+3) CREATE PAYMENT (MOCK OR REAL)
+------------------------------------------------------------
+POST {{BASE_URL}}/api/checkout/create-payment
+Headers:
+  Content-Type: application/json
+
+Body:
+{
+  "orderId": {{orderId}},
+  "gateway": "momo"
+}
+
+Expected:
+{
+  "ok": true,
+  "orderCode": "ORD-20260409-0001",
+  "gateway": "momo",
+  "paymentUrl": "...",
+  "transactionId": ...,
+  "mockMode": true/false
+}
+
+Notes:
+  - mockMode=true => paymentUrl is local mock return link.
+  - mockMode=false => paymentUrl should be real gateway URL.
+
+------------------------------------------------------------
+4) CHECK ORDER STATUS
+------------------------------------------------------------
+GET {{BASE_URL}}/api/checkout/status/ORD-20260409-0001
+
+Expected:
+{
+  "ok": true,
+  "order": { ... },
+  "transactions": [ ... ],
+  "items": [ ... ]
+}
+
+------------------------------------------------------------
+5) TEST WEBHOOK (MANUAL MOCK PAYLOAD)
+------------------------------------------------------------
+POST {{BASE_URL}}/api/checkout/webhook/momo
+Headers:
+  Content-Type: application/json
+
+Body example (for mock/dev):
+{
+  "orderId": "ORD-20260409-0001",
+  "requestId": "momo_mock_001",
+  "resultCode": 0,
+  "message": "Success",
+  "amount": 530000,
+  "transId": "1234567890"
+}
+
+Then call:
+GET {{BASE_URL}}/api/checkout/status/ORD-20260409-0001
+Order/payment status should become paid when signature verification passes
+(or when PAYMENT_MOCK=true).
+
+------------------------------------------------------------
+6) RETURN URL TEST
+------------------------------------------------------------
+GET {{BASE_URL}}/api/checkout/return/momo?orderCode=ORD-20260409-0001&status=success
+
+This endpoint is for frontend redirect handling.
+Final payment state should still rely on webhook.

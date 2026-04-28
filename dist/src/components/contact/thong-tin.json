@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_contact_thong_tins",
+    "info": {
+        "displayName": "Thông tin"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "richtext",
+            "customField": "global::tinymce"
+        }
+    },
+    "config": {}
+}

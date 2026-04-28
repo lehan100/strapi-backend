@@ -4,7 +4,7 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "Category"
+    "displayName": "Danh sách Danh mục"
   },
   "options": {
     "draftAndPublish": true
@@ -30,9 +30,9 @@
       "targetField": "name",
       "required": true
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::category.category"
     },
     "icon": {
@@ -47,29 +47,9 @@
         "fa-briefcase"
       ]
     },
-    "target_page": {
-      "type": "enumeration",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "enum": [
-        "Default",
-        "Homepage",
-        "About",
-        "Posts",
-        "PostDetail",
-        "Events",
-        "EventDetail",
-        "Services",
-        "ServiceDetail",
-        "Career",
-        "Contact"
-      ]
-    },
     "description": {
       "type": "richtext",
+      "customField": "global::tinymce",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -113,6 +93,24 @@
       },
       "component": "partials.options",
       "repeatable": true
+    },
+    "target_page": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "enum": [
+        "Default",
+        "Homepage",
+        "About",
+        "Post",
+        "Event",
+        "Service",
+        "Career",
+        "Contact"
+      ]
     }
   }
 }

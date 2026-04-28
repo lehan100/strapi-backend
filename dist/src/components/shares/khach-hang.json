@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_shares_khach_hangs",
+    "info": {
+        "displayName": "Khách hàng"
+    },
+    "options": {},
+    "attributes": {
+        "items": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::customer-set.customer-set"
+        }
+    },
+    "config": {}
+}

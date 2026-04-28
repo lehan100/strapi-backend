@@ -1,0 +1,26 @@
+{
+    "collectionName": "components_repeatable_hyperlink_to_images",
+    "info": {
+        "displayName": "Hyperlink To Image"
+    },
+    "options": {},
+    "attributes": {
+        "photo": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "title": {
+            "type": "string"
+        },
+        "link": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

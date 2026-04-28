@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_career_image_galaxies",
+    "info": {
+        "displayName": "Image Galaxy"
+    },
+    "options": {},
+    "attributes": {
+        "items": {
+            "type": "component",
+            "component": "repeatable.hyperlink-to-image",
+            "repeatable": true
+        },
+        "title": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

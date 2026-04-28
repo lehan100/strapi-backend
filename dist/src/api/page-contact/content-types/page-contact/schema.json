@@ -1,0 +1,40 @@
+{
+    "kind": "singleType",
+    "collectionName": "page_contacts",
+    "info": {
+        "singularName": "page-contact",
+        "pluralName": "page-contacts",
+        "displayName": "Page - Liên hệ"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "info": {
+            "type": "component",
+            "component": "contact.thong-tin",
+            "repeatable": false
+        },
+        "address": {
+            "type": "component",
+            "component": "contact.dia-chi",
+            "repeatable": true
+        },
+        "certification": {
+            "type": "component",
+            "component": "contact.giay-chung-nhan",
+            "repeatable": false
+        },
+        "seo": {
+            "type": "component",
+            "component": "seo-metadata.meta-seo",
+            "repeatable": false
+        },
+        "banner": {
+            "type": "component",
+            "component": "partials.banner-top",
+            "repeatable": false
+        }
+    }
+}

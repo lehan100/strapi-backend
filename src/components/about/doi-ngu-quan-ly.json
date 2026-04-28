@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_doi_ngu_quan_ly",
+  "info": {
+    "displayName": "Đội ngũ quản lý"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event-participant.event-participant"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

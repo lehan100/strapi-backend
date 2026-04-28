@@ -4,7 +4,7 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Danh sách sự kiện"
   },
   "options": {
     "draftAndPublish": true
@@ -36,18 +36,6 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
-    },
-    "event_schedules": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::event-schedule.event-schedule",
-      "mappedBy": "event"
-    },
-    "event_participants": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::event-participant.event-participant",
-      "mappedBy": "event"
     },
     "photo": {
       "type": "media",
@@ -141,6 +129,18 @@
           "localized": true
         }
       }
+    },
+    "schedules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event-schedule.event-schedule",
+      "mappedBy": "danh_sach_su_kien"
+    },
+    "participants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event-participant.event-participant",
+      "mappedBy": "items"
     }
   }
 }

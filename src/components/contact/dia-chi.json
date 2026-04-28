@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_contact_dia_chi",
+  "info": {
+    "displayName": "Địa chỉ"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "fax": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

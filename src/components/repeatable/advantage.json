@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_repeatable_advantages",
+  "info": {
+    "displayName": "Advantage"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

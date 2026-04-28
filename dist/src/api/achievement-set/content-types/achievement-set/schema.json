@@ -1,0 +1,46 @@
+{
+    "kind": "collectionType",
+    "collectionName": "achievement_sets",
+    "info": {
+        "singularName": "achievement-set",
+        "pluralName": "achievement-sets",
+        "displayName": "Share - Thành tựu"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "icon": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "items": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "component": "repeatable.achievements",
+            "repeatable": true
+        }
+    }
+}

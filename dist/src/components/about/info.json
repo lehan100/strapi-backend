@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_about_infos",
+    "info": {
+        "displayName": "Thông tin"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        }
+    },
+    "config": {}
+}

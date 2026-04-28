@@ -1,0 +1,49 @@
+{
+    "kind": "collectionType",
+    "collectionName": "event_schedules",
+    "info": {
+        "singularName": "event-schedule",
+        "pluralName": "event-schedules",
+        "displayName": "Lịch trình hoạt động sự kiện"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "event_time": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "description": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "danh_sach_su_kien": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::event.event",
+            "inversedBy": "schedules"
+        }
+    }
+}

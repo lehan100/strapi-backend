@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_about_lich_su_hinh_thanhs",
+    "info": {
+        "displayName": "Lịch sử hình thành"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "items": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::share-history.share-history"
+        }
+    },
+    "config": {}
+}

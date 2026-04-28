@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_career_tuyen_dung_nhu_the_naos",
+  "info": {
+    "displayName": "Tuyển dụng như thế nào"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "repeatable.info-to-image-editor",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

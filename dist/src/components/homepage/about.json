@@ -1,0 +1,42 @@
+{
+    "collectionName": "components_homepage_abouts",
+    "info": {
+        "displayName": "Giới thiệu"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "button_text": {
+            "type": "string"
+        },
+        "button_link": {
+            "type": "string"
+        },
+        "photo": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "background": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        }
+    },
+    "config": {}
+}

@@ -4,15 +4,24 @@
     "info": {
         "singularName": "category",
         "pluralName": "categories",
-        "displayName": "Category"
+        "displayName": "Danh sách Danh mục"
     },
     "options": {
         "draftAndPublish": true
     },
-    "pluginOptions": {},
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
     "attributes": {
         "name": {
             "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
             "required": true,
             "unique": true
         },
@@ -21,21 +30,87 @@
             "targetField": "name",
             "required": true
         },
-        "photo": {
-            "type": "media",
-            "multiple": false,
-            "allowedTypes": [
-                "images",
-                "files"
+        "category": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::category.category"
+        },
+        "icon": {
+            "type": "enumeration",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "enum": [
+                "fa-house",
+                "fa-briefcase"
             ]
         },
-        "active": {
-            "type": "boolean"
+        "description": {
+            "type": "richtext",
+            "customField": "global::tinymce",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
         },
-        "categories": {
-            "type": "relation",
-            "relation": "oneToMany",
-            "target": "api::category.category"
+        "active": {
+            "type": "boolean",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "default": true
+        },
+        "order": {
+            "type": "integer",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "default": 0
+        },
+        "seo": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "component": "seo-metadata.meta-seo",
+            "repeatable": false
+        },
+        "positions": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "component": "partials.options",
+            "repeatable": true
+        },
+        "target_page": {
+            "type": "enumeration",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "enum": [
+                "Default",
+                "Homepage",
+                "About",
+                "Post",
+                "Event",
+                "Service",
+                "Career",
+                "Contact"
+            ]
         }
     }
 }

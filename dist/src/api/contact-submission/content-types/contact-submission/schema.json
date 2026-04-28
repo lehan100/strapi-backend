@@ -1,0 +1,57 @@
+{
+    "kind": "collectionType",
+    "collectionName": "contact_submissions",
+    "info": {
+        "singularName": "contact-submission",
+        "pluralName": "contact-submissions",
+        "displayName": "Liên hệ - Đăng ký"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "userType": {
+            "type": "enumeration",
+            "default": "client",
+            "enum": [
+                "candidate",
+                "client"
+            ]
+        },
+        "fullname": {
+            "type": "string",
+            "required": true
+        },
+        "company": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string",
+            "required": true
+        },
+        "email": {
+            "type": "email",
+            "required": true
+        },
+        "requirements": {
+            "type": "text"
+        },
+        "agreeTerms": {
+            "type": "boolean",
+            "default": false
+        },
+        "source": {
+            "type": "string"
+        },
+        "pagePath": {
+            "type": "string"
+        },
+        "ipAddress": {
+            "type": "string"
+        },
+        "userAgent": {
+            "type": "text"
+        }
+    }
+}

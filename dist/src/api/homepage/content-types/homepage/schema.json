@@ -1,0 +1,58 @@
+{
+    "kind": "singleType",
+    "collectionName": "homepages",
+    "info": {
+        "singularName": "homepage",
+        "pluralName": "homepages",
+        "displayName": "Page - Trang chủ"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "video": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "component": "homepage.video",
+            "repeatable": false
+        },
+        "seo": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "component": "seo-metadata.meta-seo",
+            "repeatable": false
+        },
+        "blocks": {
+            "type": "dynamiczone",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "components": [
+                "shares.video",
+                "shares.thanh-tuu",
+                "shares.doi-tac",
+                "shares.khach-hang",
+                "shares.cam-nhan-khach-hang",
+                "homepage.about",
+                "homepage.giai-phap-nhan-su",
+                "homepage.su-kien",
+                "homepage.tin-tuc"
+            ]
+        }
+    }
+}

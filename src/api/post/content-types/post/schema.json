@@ -4,7 +4,7 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post"
+    "displayName": "Danh sách bài viết"
   },
   "options": {
     "draftAndPublish": true
@@ -59,6 +59,7 @@
     },
     "content": {
       "type": "richtext",
+      "customField": "global::tinymce",
       "pluginOptions": {
         "i18n": {
           "localized": true

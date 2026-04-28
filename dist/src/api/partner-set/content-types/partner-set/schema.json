@@ -1,0 +1,37 @@
+{
+    "kind": "collectionType",
+    "collectionName": "partner_sets",
+    "info": {
+        "singularName": "partner-set",
+        "pluralName": "partner-sets",
+        "displayName": "Share - Đối tác"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "item_logos": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "component": "repeatable.hyperlink-to-image",
+            "repeatable": true
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_careers",
+  "info": {
+    "singularName": "page-career",
+    "pluralName": "page-careers",
+    "displayName": "Page - Giải pháp nhân sự"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "partials.banner-top",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-metadata.meta-seo",
+      "repeatable": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "career.goc-chia-se",
+        "career.lam-viec-tai-nha-linh-hoat",
+        "career.image-galaxy",
+        "career.lam-viec-tai-nha",
+        "career.tuyen-dung-nhu-the-nao"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shares_thanh_tuus",
+  "info": {
+    "displayName": "Thành tựu"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::achievement-set.achievement-set"
+    }
+  },
+  "config": {}
+}

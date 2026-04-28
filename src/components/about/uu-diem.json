@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_about_uu_diems",
+  "info": {
+    "displayName": "Ưu điểm"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "component": "repeatable.advantage",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

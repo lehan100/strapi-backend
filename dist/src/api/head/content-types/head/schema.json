@@ -1,0 +1,20 @@
+{
+    "kind": "singleType",
+    "collectionName": "heads",
+    "info": {
+        "singularName": "head",
+        "pluralName": "heads",
+        "displayName": "Head"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "favicon": {
+            "type": "component",
+            "component": "partials.header",
+            "repeatable": false
+        }
+    }
+}

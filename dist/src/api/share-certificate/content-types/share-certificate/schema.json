@@ -1,0 +1,32 @@
+{
+    "kind": "collectionType",
+    "collectionName": "share_certificates",
+    "info": {
+        "singularName": "share-certificate",
+        "pluralName": "share-certificates",
+        "displayName": "Share - Chứng chỉ - Chứng nhận"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "items": {
+            "type": "component",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "component": "repeatable.info-to-image",
+            "repeatable": true
+        }
+    }
+}

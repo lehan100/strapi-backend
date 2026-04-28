@@ -1,0 +1,31 @@
+{
+    "collectionName": "components_contact_giay_chung_nhans",
+    "info": {
+        "displayName": "Giấy chứng nhận"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "title_refix": {
+            "type": "string"
+        },
+        "photo": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "certification_items": {
+            "type": "component",
+            "component": "about.repeat-so-chung-nhan",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

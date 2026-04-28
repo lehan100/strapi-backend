@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_repeatable_customer_feedbacks",
+    "info": {
+        "displayName": "Customer feedback"
+    },
+    "options": {},
+    "attributes": {
+        "author": {
+            "type": "string"
+        },
+        "avatar": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "regency": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "text"
+        }
+    },
+    "config": {}
+}

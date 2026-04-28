@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shares_doi_tacs",
+  "info": {
+    "displayName": "Đối tác"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::partner-set.partner-set"
+    }
+  },
+  "config": {}
+}

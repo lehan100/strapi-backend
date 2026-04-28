@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_sets",
+  "info": {
+    "singularName": "video-set",
+    "pluralName": "video-sets",
+    "displayName": "Share - Video"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "items": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "repeatable.video",
+      "repeatable": true,
+      "max": 10
+    }
+  }
+}

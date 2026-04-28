@@ -4,7 +4,7 @@
   "info": {
     "singularName": "homepage",
     "pluralName": "homepages",
-    "displayName": "Homepage"
+    "displayName": "Page - Trang chủ"
   },
   "options": {
     "draftAndPublish": true
@@ -35,127 +35,24 @@
       "component": "seo-metadata.meta-seo",
       "repeatable": false
     },
-    "about": {
-      "type": "component",
+    "blocks": {
+      "type": "dynamiczone",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "homepage.about",
-      "repeatable": false
-    },
-    "achievements": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::achievement.achievement"
-    },
-    "human_resource_title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "human_resource_button_text": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "human_resources": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::human-resource.human-resource"
-    },
-    "customer_title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "customers": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::customer.customer"
-    },
-    "feedback_title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "fedbacks": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::fedback.fedback"
-    },
-    "partner_title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "partners": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::partner.partner"
-    },
-    "post_title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "posts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::post.post"
-    },
-    "event_title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "event_button_text": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "events": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::event.event"
-    },
-    "video_title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "videos": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::video.video"
+      "components": [
+        "shares.video",
+        "shares.thanh-tuu",
+        "shares.doi-tac",
+        "shares.khach-hang",
+        "shares.cam-nhan-khach-hang",
+        "homepage.about",
+        "homepage.giai-phap-nhan-su",
+        "homepage.su-kien",
+        "homepage.tin-tuc"
+      ]
     }
   }
 }

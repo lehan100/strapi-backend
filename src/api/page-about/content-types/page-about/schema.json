@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_abouts",
+  "info": {
+    "singularName": "page-about",
+    "pluralName": "page-abouts",
+    "displayName": "Page - Giới thiệu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "partials.banner-top",
+      "repeatable": false
+    },
+    "info": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "about.info",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo-metadata.meta-seo",
+      "repeatable": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "about.uu-diem",
+        "shares.thanh-tuu",
+        "about.lich-su-hinh-thanh",
+        "about.doi-ngu-quan-ly",
+        "shares.doi-tac",
+        "homepage.giai-phap-nhan-su",
+        "shares.chung-chi-chung-nhan"
+      ]
+    }
+  }
+}

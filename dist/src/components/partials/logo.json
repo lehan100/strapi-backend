@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_partials_logos",
+    "info": {
+        "displayName": "Logo"
+    },
+    "options": {},
+    "attributes": {
+        "logo": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "company_name": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

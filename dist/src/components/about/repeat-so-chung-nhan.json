@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_about_repeat_so_chung_nhan_s",
+    "info": {
+        "displayName": "Repeat - Số chứng nhận "
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "code": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

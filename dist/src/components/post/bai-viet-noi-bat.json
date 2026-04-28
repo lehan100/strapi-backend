@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_post_bai_viet_noi_bats",
+    "info": {
+        "displayName": "Bài viết nổi bật"
+    },
+    "options": {},
+    "attributes": {
+        "items": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::post.post"
+        }
+    },
+    "config": {}
+}

@@ -9,7 +9,7 @@
       "type": "string"
     },
     "description": {
-      "type": "text"
+      "type": "string"
     },
     "button_text": {
       "type": "string"

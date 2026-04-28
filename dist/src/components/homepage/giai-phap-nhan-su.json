@@ -1,0 +1,31 @@
+{
+    "collectionName": "components_homepage_giai_phap_nhan_su",
+    "info": {
+        "displayName": "Giải pháp nhân sự"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "button_text": {
+            "type": "string"
+        },
+        "icon": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "items": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::human-resource.human-resource"
+        }
+    },
+    "config": {}
+}

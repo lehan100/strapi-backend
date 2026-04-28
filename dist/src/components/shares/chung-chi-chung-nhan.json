@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_shares_chung_chi_chung_nhans",
+    "info": {
+        "displayName": "Chứng chỉ - Chứng nhận"
+    },
+    "options": {},
+    "attributes": {
+        "item": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::share-certificate.share-certificate"
+        }
+    },
+    "config": {}
+}
